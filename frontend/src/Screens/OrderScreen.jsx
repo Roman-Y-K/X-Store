@@ -221,8 +221,8 @@ const OrderScreen = () => {
                     <Loader />
                   ) : (
                     <div>
-                      {/* THIS BUTTON IS FOR TESTING! REMOVE BEFORE PRODUCTION! */}
-                      <Button
+                      {/* ONLY FOR DEVELOPMENT!*/}
+                      {/* <Button
                         style={{ marginBottom: '10px' }}
                         onClick={onApproveTest}
                       >
@@ -235,7 +235,7 @@ const OrderScreen = () => {
                           onApprove={onApprove}
                           onError={onError}
                         ></PayPalButtons>
-                      </div>
+                      </div> */}
                     </div>
                   )}
                 </ListGroup.Item>
