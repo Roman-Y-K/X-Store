@@ -3,9 +3,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Form, Button } from 'react-bootstrap';
 import { toast } from 'react-toastify';
 
-import Loader from '../Loader';
-import { setCredentials } from '../../slices/authSlice';
-import { useProfileMutation } from '../../slices/usersApiSlice';
+import Loader from '../../Loader';
+import { setCredentials } from '../../../slices/authSlice';
+import { useProfileMutation } from '../../../slices/usersApiSlice';
 
 const UserProfileForm = () => {
   const [userForm, setUserForm] = useState({});
@@ -50,51 +50,51 @@ const UserProfileForm = () => {
 
   return (
     <Form onSubmit={handleFormSubmit}>
-      <Form.Group className="my-2" controlId="name">
+      <Form.Group className='my-2' controlId='name'>
         <Form.Label>Name</Form.Label>
         <Form.Control
-          name="name"
-          type="text"
-          placeholder="Enter name"
+          name='name'
+          type='text'
+          placeholder='Enter name'
           value={userForm.name}
           onChange={handleFormUpdate}
         ></Form.Control>
       </Form.Group>
 
-      <Form.Group className="my-2" controlId="email">
+      <Form.Group className='my-2' controlId='email'>
         <Form.Label>Email Address</Form.Label>
         <Form.Control
-          name="email"
-          type="email"
-          placeholder="Enter email"
+          name='email'
+          type='email'
+          placeholder='Enter email'
           value={userForm.email}
           onChange={handleFormUpdate}
         ></Form.Control>
       </Form.Group>
 
-      <Form.Group className="my-2" controlId="password">
+      <Form.Group className='my-2' controlId='password'>
         <Form.Label>Password</Form.Label>
         <Form.Control
-          name="password"
-          type="password"
-          placeholder="Enter password"
+          name='password'
+          type='password'
+          placeholder='Enter password'
           value={userForm.password}
           onChange={handleFormUpdate}
         ></Form.Control>
       </Form.Group>
 
-      <Form.Group className="my-2" controlId="confirmPassword">
+      <Form.Group className='my-2' controlId='confirmPassword'>
         <Form.Label>Confirm Password</Form.Label>
         <Form.Control
-          name="confirmPassword"
-          type="password"
-          placeholder="Confirm password"
+          name='confirmPassword'
+          type='password'
+          placeholder='Confirm password'
           value={userForm.confirmPassword}
           onChange={handleFormUpdate}
         ></Form.Control>
       </Form.Group>
 
-      <Button type="submit" variant="primary">
+      <Button type='submit' variant='primary'>
         Update
       </Button>
       {loadingUpdateProfile && <Loader />}
