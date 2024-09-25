@@ -6,7 +6,7 @@ import { useNavigate, Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 
 import logo from '../../assets/logo.png';
-import SearchForm from '../SearchForm';
+import SearchForm from '../Forms/SearchForm';
 import { useLogoutMutation } from '../../slices/usersApiSlice';
 import { logout } from '../../slices/authSlice';
 import { resetCart } from '../../slices/cartSlice';
@@ -14,6 +14,8 @@ import { resetCart } from '../../slices/cartSlice';
 const Header = () => {
   const { cartItems } = useSelector((state) => state.cart);
   const { userInfo } = useSelector((state) => state.auth);
+
+  console.log(userInfo);
 
   const dispatch = useDispatch();
   const navigate = useNavigate();

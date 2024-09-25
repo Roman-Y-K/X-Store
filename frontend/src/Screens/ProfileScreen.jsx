@@ -1,7 +1,7 @@
 import React from 'react';
 import { Row, Col } from 'react-bootstrap';
 
-import UserProfileForm from '../components/UserProfileForm';
+import UserProfileForm from '../components/Forms/UserProfileForm';
 import OrdersHistory from '../components/OrdersHistory';
 
 const ProfileScreen = () => {
